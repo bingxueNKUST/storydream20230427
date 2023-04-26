@@ -1,0 +1,119 @@
+@charset "UTF-8";
+/* 圖像區 */
+#page-text {
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+#text-area {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 150%;
+  font-weight: 400;
+  resize: none;
+  position: relative;
+  border: 1px dashed rgba(192, 188, 188, 0.7725490196);
+}
+
+#text-area:hover,
+#text-area:focus {
+  outline: none;
+  border: 1px dashed rgba(94, 92, 92, 0.771);
+}
+
+#ta-readonly {
+  resize: none;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 150%;
+  font-weight: 400;
+  border: 0px;
+  outline: none;
+}
+
+#ta-readonly:hover,
+#ta-readonly:focus {
+  outline: none;
+}
+
+#page-cover {
+  width: 100%;
+  height: 80vw;
+  background-color: rgb(255, 255, 255);
+  border-radius: 15px;
+  flex-wrap: nowrap;
+  box-shadow: rgba(0, 0, 0, 0.3) 10px 10px 30px;
+}
+#page-cover div#page-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.area-bottom div#page-image,
+.area-top div#page-image {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 100%;
+  height: 90%;
+}
+.area-bottom #page-text,
+.area-top #page-text {
+  width: 100%;
+  height: 30%;
+}
+
+.area-top {
+  display: flex;
+  flex-direction: column;
+}
+.area-top div#page-image {
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.area-bottom {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.area-bottom div#page-image {
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.area-left div#page-image,
+.area-right div#page-image {
+  -o-object-fit: fill;
+     object-fit: fill;
+  width: 66%;
+  height: 100%;
+}
+.area-left #page-text,
+.area-right #page-text {
+  height: 100%;
+  width: 34%;
+}
+
+.area-left {
+  display: flex;
+  flex-direction: row;
+}
+.area-left div#page-image {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.area-right {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.area-right div#page-image {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,49 @@
+{% extends "base.html" %} {% block content %}
+
+  
+<div class="row mb-row align-items-center" style="margin-top:5%;">
+  <div class="col-12">
+      <div class="d-flex justify-content-center">
+        <div class="user_card">
+            <h3 id="form-title" class="text-center">會員登入</h3>
+            <br>
+            <form method="POST" action="{% url 'login'%}">
+              {%csrf_token%}
+              <div class="form-floating mb-3">
+                <input  type="text" name="username" placeholder="請輸入帳號" class="form-control">
+                <label for="floatingUsername"> <i class="fa-solid fa-circle-user"></i> 帳號</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input  type="password" name="password" placeholder="請輸入密碼" class="form-control">
+                <label for="floatingPassword"><i class="fa-solid fa-key"></i> 密碼</label>
+              </div>
+              
+              <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-success btn-round btn-block shadow-sm">登入</button>
+              </div>
+            </form>
+
+          {% for message in messages %}
+            <p id="messages">{{message}}</p>
+          {%endfor%}
+          <br>
+              <p class="text-center">還沒有帳號？<a href="{% url 'register' %}" class="ml-2">立即註冊</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

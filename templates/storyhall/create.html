@@ -1,0 +1,20 @@
+<script>
+  function create() {
+    let url = new URL(location.href);
+    $(document).ready(function () {
+      $.ajaxSetup({
+        data: { csrfmiddlewaretoken: "{{ csrf_token }}" },
+      });
+      $.ajax({
+        url: "{% url 'book_create' %}", // 要傳送的頁面
+        method: "POST", // 使用 POST 方法傳送請求
+        async: false,
+        DataType: "HTML",
+        success: function (response) {
+          url.pathname = response;
+          $(window).attr("location", url.pathname);
+        },
+      });
+    });
+  }
+</script>
