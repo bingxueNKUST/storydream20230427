@@ -14,11 +14,11 @@
                   <div class="col-md-9">
                     <button id="area-top"
                       {% if  pages.img_location == 'area-top'%}
-                        class="btn btn-outline-secondary btn-up active"
+                        class="btn btn-outline-success shadow-sm btn-up active"
                       {% else %}
-                        class="btn btn-outline-secondary btn-up"
+                        class="btn btn-outline-success shadow-sm btn-up"
                       {% endif %}
-                      class="btn btn-outline-secondary btn-up active"
+                      class="btn btn-outline-success shadow-sm btn-up active"
                       type="button"
                       onclick="Changelocation(0)"
                     >
@@ -30,9 +30,9 @@
                     <button
                       id="area-bottom"
                       {% if  pages.img_location == 'area-bottom'%}
-                      class="btn btn-outline-secondary btn-down active"
+                      class="btn btn-outline-success shadow-sm btn-down active"
                       {% else %}
-                        class="btn btn-outline-secondary btn-down"
+                        class="btn btn-outline-success shadow-sm btn-down"
                       {% endif %}                
                       type="button"
                       onclick="Changelocation(1)"
@@ -45,13 +45,14 @@
                     <button
                       id="area-left"
                       {% if  pages.img_location == 'area-left'%}
-                      class="btn btn-outline-secondary btn-left active"
+                      class="btn btn-outline-success shadow-sm btn-left active"
                       {% else %}
-                        class="btn btn-outline-secondary btn-left"
+                        class="btn btn-outline-success shadow-sm btn-left"
                       {% endif %}  
-                      class="btn btn-outline-secondary btn-left"
+                      class="btn btn-outline-success shadow-sm btn-left"
                       type="button"
                       onclick="Changelocation(2)"
+                      style="margin-top:2%;"
                     >
                       <img
                         src="{% static 'image/image-left.png' %}"
@@ -61,12 +62,13 @@
                     <button
                       id="area-right"
                       {% if  pages.img_location == 'area-right'%}
-                      class="btn btn-outline-secondary btn-right active"
+                      class="btn btn-outline-success shadow-sm btn-right active"
                       {% else %}
-                        class="btn btn-outline-secondary btn-right"
+                        class="btn btn-outline-success shadow-sm btn-right"
                       {% endif %}  
                       type="button"
                       onclick="Changelocation(3)"
+                      style="margin-top:2%;"
                     >
                       <img
                         src="{% static 'image/image-right.png' %}"
@@ -140,7 +142,7 @@
       </h2>
     <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
           <div class="accordion-body">
-            <div class="container" >
+            
               <div class="row" >
                 <div class="col-md-12">
                   <div id="promptbase" class="btn-box pre-scrollable" style="overflow-x: hidden;overflow-y: auto;display: flex;flex-wrap: wrap;padding: 0.5rem;">
@@ -153,8 +155,7 @@
                 </div>
               </div>
               <!-- row -->
-            </div>
-            <!-- container -->
+            
           </div>
         </div>
       </div>
