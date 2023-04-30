@@ -1,11 +1,18 @@
 {% extends 'base.html' %}{% block content%}
-
+{% load static %}
 <div class="jumbotron jumbotron-lg jumbotron-fluid mb-0 pb-5 bg-warning position-relative">
 	<div class="container text-white h-100 tofront">
-		<div class="row align-items-center justify-content-center text-center">
-			<div class="col-md-10">
-				<h1 class="display-3">This is a starter page filled with nothing to start your project quickly</h1>
-			</div>
+      <div class="d-lg-flex align-items-center justify-content-between text-center pl-lg-5">
+        <div class="col pt-4 pb-4">
+            <h1 class="display-3">StoryDream</h1>
+            <h5 class="font-weight-light mb-4">童心無限，AI 繪本無極限！</h5>
+            <button type="button" class="btn btn-lg btn-outline-white btn-round" onclick="create()">
+              立即創造繪本
+            </button>
+        </div>
+        <div class="col align-self-bottom align-items-right text-right h-max-380 h-xl-560 position-relative z-index-1">
+            <img src="{% static 'image/banner_img.png' %}" class="rounded img-fluid">
+        </div>
 		</div>
 	</div>
 </div>
@@ -38,10 +45,7 @@
           <a class="dropdown-item" href="#">熱門3</a>
         </div>
       </div>
-      
-
-
-        <button type="button" class="btn btn-primary" style="float: right" onclick="create()">
+        <button type="button" class="btn btn-primary d-none d-sm-block" style="float: right" onclick="create()" >
           建立繪本
         </button>
       </div>
@@ -54,7 +58,7 @@
     <div class="col-12">
       <div class="row row-cols-1 row-cols-md-4 g-4">
         {% for book in books %} {% if book.public_status %}
-        <div class="col-3">
+        <div class="col-lg-3 col-sm-1 col-xs-1">
           <a id="card-a" href="{% url 'storyview' book.id %}">
             <div id="card-style" class="card h-100">
 

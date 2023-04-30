@@ -6,11 +6,7 @@
     .white-block {
         padding: 20px;
         border-radius: 10px;
-        border-style: dashed;
-        -webkit-border-radius: 10px;
-        -moz-border-radius: 10px;
-        -ms-border-radius: 10px;
-        -o-border-radius: 10px;
+        background-color: #FFB300 !important;
     }
     
     .mt-10 {
@@ -157,4 +153,82 @@ font-size: .8em;
         flex-direction: column;
         display: flex;
         font-size: 18px;
+    }
+    
+    @media (min-width: 320px) {
+        .login {
+            margin-top: 10%;
+            margin-left: 0.5%;
+        }
+        .register {
+            margin-top: 30%;
+            margin-left: 0.5%;
+            margin-bottom: 35%;
+        }
+        .storyview {
+            margin-top: 30%;
+        }
+        .markerspaceMain {
+            margin-top: 30%;
+        }
+        .markerspaceImg {
+            margin-top: 3%;
+        }
+        .markerspaceBtn {
+            margin-top: 3%;
+        }
+        .markerspaceLoadpages {
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-bottom: 3%;
+        }
+    }
+    
+    @media (min-width: 768px) {
+        .register {
+            margin-top: 13%;
+            margin-left: none;
+            margin-bottom: 15%;
+        }
+        .storyview {
+            margin-top: 13%;
+        }
+        .markerspaceMain {
+            margin-top: 13%;
+        }
+        .markerspaceImg {
+            margin-top: 3%;
+        }
+        .markerspaceBtn {
+            margin-top: 3%;
+        }
+    }
+    
+    @media (min-width: 992px) {
+        .markerspaceMain {
+            margin-top: 10%;
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .login {
+            margin-top: 5%;
+            margin-left: none;
+        }
+        .register {
+            margin-top: 6%;
+            margin-left: none;
+            margin-bottom: 5%;
+        }
+        .markerspaceMain {
+            margin-top: 8%;
+        }
+        .markerspaceBtn {
+            height: 170px;
+        }
+        .markerspaceLoadpages {
+            padding-right: 0px;
+            padding-left: 0px;
+            padding-bottom: 3%;
+        }
     }

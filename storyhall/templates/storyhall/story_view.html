@@ -1,7 +1,7 @@
 {% extends 'base.html' %}{% block content%}
-<div class="container mt-10 " style="margin-top:7%;">
+<div class="container storyview">
   <div class="row">
-    <div class="col-3">
+    <div class="col-lg-3 col-sm-12">
       <p class="text-center fz-24">作者資訊</p>
       <img
         src="https://fakeimg.pl/200x200/?text={{ book.author }}&font=lobster"
@@ -14,17 +14,17 @@
       <p class="mt-10">故事名稱：{{ book.title }}</p>
       <p class="mt-10">大綱：{{ book.description }}</p>
     </div>
-    <div class="col-1">
+    <div class="col-1 d-none d-lg-block">
       <div class="d-flex" style="height: 100%;">
         <div class="vr"></div>
       </div>
     </div>
-    <div class="col-8">
+    <div class="col-lg-8 col-sm-12">
       <div class="row">
         <div class="col-12">{% include 'storyhall/showpage.html'%}</div>
         <div class="col-12">
           <!-- 頁數選擇 -->
-          <div class="container mt-30 of-y">
+          <div class="container mt-30 of-y"  style="padding-bottom: 3%; padding-top:3%;">
             <div class="row">
               <ul class="ul-of">
                 {% for page in pages %}
