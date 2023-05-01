@@ -53,7 +53,6 @@
                 name="public_status"
                 id="open"
                 value="public"
-                checked
               />
               <label class="form-check-label" for="open"> 公開 </label>
             </div>
@@ -64,6 +63,7 @@
                 name="public_status"
                 id="private"
                 value="private"
+                checked
               />
               <label class="form-check-label" for="private"> 私密 </label>
             </div>
@@ -82,7 +82,7 @@
             class="form-control"
             id="book_title"
             name="book_title"
-            placeholder=""
+            placeholder="輸入故事標題"
             value="{{book.title}}"
           />
           <div class="invalid-feedback">請輸入故事標題</div>
@@ -93,6 +93,7 @@
             class="form-control"
             id="description"
             name="description"
+            placeholder="輸入故事大綱"
             rows="10"
           >{{book.description}}</textarea>
           <div class="invalid-feedback">請輸入大綱</div>

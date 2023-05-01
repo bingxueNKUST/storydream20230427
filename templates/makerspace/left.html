@@ -123,7 +123,7 @@
                     name="seed"
                     min="1"
                     step="1"
-                    value="{{pages.page_number}}"
+                    value="{{pages.seeds}}"
                     class="form-control"
                   />
                   <div class="invalid-feedback">請輸入seed</div>
@@ -165,7 +165,7 @@
 
   <div class="row">
     <div class="col-md-12 mt-10">
-      <textarea id="promptArea" name="prompt" class="form-control" style="resize: none;" onkeyup="updatePrompt()">{{pages.prompt}}</textarea>
+      <textarea id="promptArea" name="prompt" class="form-control" style="resize: none;" onkeyup="updatePrompt()" placeholder="可自行輸入圖片的關鍵字或透過上方類別選擇!" value="{{pages.prompt}}">{{pages.prompt}}</textarea>
     </div>
   </div>
 
