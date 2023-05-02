@@ -23,56 +23,55 @@
             <img
               name="cover_page"
               src="data:image/png;base64,{{cover_page.image}}"
-              class="img-fluid"
+              class="img-fluid mb-10"
               alt="..."
             />
             {% else %}
             <img
-              src="https://fakeimg.pl/500x280/?text=none&font=lobster"
-              class="mx-auto d-block img-fluid"
+              src="https://fakeimg.pl/540x540/?text=none&font=lobster"
+              class="mx-auto d-block img-fluid mb-10"
               alt="..."
               style="border-radius: 10px"
             />
             {% endif %}
-            <div class="mb-3 mt-10">
-              <label class="form-label">類別：</label>
-              <select class="form-select" aria-label="Default select example">
-                <option selected disabled>請選擇類別</option>
-                <option value="1">類別1</option>
-                <option value="2">類別2</option>
-                <option value="3">類別3</option>
-              </select>
-              <div class="invalid-feedback">請選擇類別</div>
-            </div>
-            <p>頁數：{{pages}}頁</p>
-            <label class="form-label">狀態：</label>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="public_status"
-                id="open"
-                value="public"
-              />
-              <label class="form-check-label" for="open"> 公開 </label>
-            </div>
-            <div class="form-check form-check-inline">
-              <input
-                class="form-check-input"
-                type="radio"
-                name="public_status"
-                id="private"
-                value="private"
-                checked
-              />
-              <label class="form-check-label" for="private"> 私密 </label>
-            </div>
       </div>
       <!--儲存設定-->
 
       <!--作者資訊-->
       <div class="col-lg-6 col-sm-12">
-        
+        <div class="mb-3">
+          <label class="form-label">類別：</label>
+          <select class="form-select" aria-label="Default select example">
+            <option selected disabled>請選擇類別</option>
+            <option value="1">類別1</option>
+            <option value="2">類別2</option>
+            <option value="3">類別3</option>
+          </select>
+          <div class="invalid-feedback">請選擇類別</div>
+        </div>
+        <p>頁數：{{pages}}頁</p>
+        <label class="form-label">狀態：</label>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="public_status"
+            id="open"
+            value="public"
+          />
+          <label class="form-check-label" for="open"> 公開 </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="public_status"
+            id="private"
+            value="private"
+            checked
+          />
+          <label class="form-check-label" for="private"> 私密 </label>
+        </div>
 
         
         <div class="mb-3">
